@@ -6,8 +6,106 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <!--AJAX script-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--Bootstrap script-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="assets/js/wow.min.js"></script> 
+   
+
+    <!--font-awesome Ssheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Custom Ssheet-->
+    <link rel="stylesheet" href="assets/css/mycustom.css">
+
+    <!--Animation Ssheet-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+ 
 </head>
+
 <body>
   <app-root></app-root>
 </body>
+
+<script>
+  // When the user scrolls down 400px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+          document.getElementById("myBtn").style.display = "block";
+      } else {
+          document.getElementById("myBtn").style.display = "none";
+      }
+  }
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+  </script>    
+     
+
+
+
+
+<script>
+wow = new WOW({
+  boxClass: 'wow', // default
+  animateClass: 'animated', // default
+  offset: 0, // default
+  mobile: true, // default
+  live: true // default
+})
+wow.init();
+              
+</script>
+
+<script>
+  function openModal() {
+      document.getElementById('myModal').style.display = "block";
+  }
+  
+  function closeModal() {
+      document.getElementById('myModal').style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+      showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+      showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+    
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>
+
 </html>
+

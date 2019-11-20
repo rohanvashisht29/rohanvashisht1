@@ -1,0 +1,94 @@
+<br><br>
+<br><br>
+
+
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13722.103134098523!2d76.7858126!3d30.703615999999997!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1523323671199" 
+    width="100%" height="300" frameborder="0" style="border:0" allowfullscreen>
+</iframe>
+
+<br><br><br>
+
+<div class="container">
+    <div class="row">
+        <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+            <div class="col-sm-6">
+
+
+                <div class="form-group">
+                    <label>First Name *</label>
+                    <input type="text" class="form-control" formControlName="firstName" required>
+                    <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                </div>
+                
+                <br>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="Email" class="form-control" formControlName="Email" required>
+                    <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                </div>
+                
+                <br>
+                <label for="phone" class="control-label">Phone</label>
+                <input type="number" class="form-control" value="9034991">
+                <br>
+
+                <div class="form-group">
+                    <label>Company name *</label>
+                    <input type="text" class="form-control" formControlName="CompanyName" required>
+                    <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                </div>
+
+                <br>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label>Subject *</label>
+                    <input type="text" class="form-control" formControlName="Subject" required>
+                    <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                </div>
+                <br>
+                <div class="form-group">
+                    <label>Message *</label>
+                    <textarea name="Message" id="one" rows="6" class="form-control" formControlName="Message" required></textarea>
+                    <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                </div>
+                <br>
+                <input type="submit" class="btn btn-info btn-block" value="Submit">
+            </div>
+            <pre>{{myform.value | json}}</pre>
+        </form>
+    </div>
+</div>
+
+
+<!-- <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control" formControlName="firstName" required>
+      
+          
+            <pre>Valid? {{ myform.controls.name.controls.firstName.valid }}</pre>
+            <pre>Dirty? {{ myform.controls.name.controls.firstName.dirty }}</pre>
+         
+        </div>
+      
+      <button type="submit" class="btn btn-primary">Submit</button>
+      
+      <pre>{{myform.value | json}}</pre>
+</form> -->
+
+<!-- 26 may 2018 validations -->
+<!-- <form [formGroup]="myform" (ngSubmit)="onSubmit()">
+
+
+<div class="form-group">
+<label>First Name *</label>
+<input type="text" class="form-control" formControlName="firstName" required>
+    <p *ngIf = "error">this field is required</p>  added a condition when this.error is true then it will print error on page.
+</div>
+
+<input type="submit" class="btn btn-info btn-block"  value="Submit">
+<pre>{{myform.value | json}}</pre>
+</form> -->
+      
