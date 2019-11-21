@@ -6,11 +6,26 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Rohan Vashisht</a>
+          <a class="navbar-brand" href="#">{{ header.logo }}</a>
       </div>
   <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-          <li> <a routerLink="/home" routerLinkActive="active">HOME</a></li>
+          <li *ngFor="let nav of header.navListing" [ngClass]="{'dropdown': nav.subNavListing}">
+              <a routerLink="{{ nav.subNavListing ? nav.link: '' }}" routerLinkActive="active" [ngClass]="{'dropdown-toggle': nav.subNavListing}" data-toggle="dropdown">
+              {{ nav.list }}
+              <span class="caret" *ngIf="nav.subNavListing"></span>
+              <ul class="dropdown-menu" *ngIf="nav.subNavListing">
+                    <li *ngFor="let subNav of nav.subNavListing" >
+                            <a routerLink="{{ subNav.link }}" routerLinkActive>{{ subNav.list }}</a>
+                    </li>
+              </ul>
+            </a>
+        </li>
+          
+          
+          
+          
+          <!-- <li> <a routerLink="/home" routerLinkActive="active">HOME</a></li>
           <li><a routerLink="/services" routerLinkActive="active">SERVICES</a></li>
           <li><a routerLink="/blog" routerLinkActive>BLOG</a></li>
           <li><a routerLink="/portfolio" routerLinkActive>PORTFOLIO</a></li>
@@ -19,7 +34,7 @@
                   <li><a routerLink="/message-one" routerLinkActive>+91 8168694436</a></li>
                   <li><a routerLink="/message-second" routerLinkActive>+91 9034208478</a></li> 
               </ul>
-          </li>
+          </li> -->
           <!--li><a href="https://www.google.co.in/"><i class="glyphicon glyphicon-off"></i> LOGOUT</a></li--> 
       </ul>
   </div>  
