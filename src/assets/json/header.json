@@ -1,0 +1,40 @@
+{
+    "header": {
+                "logo":"rohan vashisht",
+                "navList":[
+                            {
+                                "list": "home",
+                                "link": "/home"
+                            },
+                            {
+                                "list": "services",
+                                "link": "/services"
+                            },
+                            {
+                                "list": "blog",
+                                "link": "/blog"
+                            },
+                            {
+                                "list": "portfolio",
+                                "link": "/portfolio"
+                            },
+                            {
+                                "list": "contact",
+                                "link":"/",
+                                "subNavList":[
+                                        {
+                                          "list":"+91 8168694436",
+                                          "link":"/message-one"
+                                        },
+                                        {
+                                            "list":"+91 9034208478",
+                                            "link":"/message-two"
+                                        }
+                                    ]
+                            }
+                ]
+
+    }
+
+    
+} 
