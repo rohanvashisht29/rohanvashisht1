@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import headerData from '../../assets/json/components.json';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  header
 
   constructor() { }
 
   ngOnInit() {
+    this.header = headerData.header;
   }
 
 }
