@@ -11,10 +11,10 @@
   <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li *ngFor="let nav of header.navList" [ngClass]="{'dropdown' : nav.subNavList}">
-            <a routerLink="{{ nav.subNavList ? nav.link : '' }}" routerLinkActive="active" [ngClass]="{'dropdown-toggle' : nav.subNavList}" data-toggle="dropdown">
+            <a routerLink="{{ nav.subNavList ? '' :  nav.link }}" routerLinkActive="active" [ngClass]="{'dropdown-toggle' : nav.subNavList}" data-toggle="dropdown">
                 {{nav.list}}
                 <span [ngClass]="{'caret' : nav.subNavList}"></span>
-                <ul class="dropdown-menu">
+                <ul class="dropdown-menu" *ngIf="nav.subNavList" (click)="$event.stopPropagation()">
                         <li *ngFor="let subNav of nav.subNavList">
                             <a routerLink="{{subNav.link}}" routerLinkActive="active">{{subNav.list}}</a>
                         </li>
