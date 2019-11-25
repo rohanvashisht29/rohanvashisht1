@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import {ReactiveFormsModule,FormGroup,FormControl,Validators,FormBuilder} from '@angular/forms';
 
 
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },

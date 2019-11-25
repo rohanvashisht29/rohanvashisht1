@@ -1,0 +1,51 @@
+{
+    "footer":{
+        "logo":"Rohan Vashisht",
+        "description":"User description goes here. Write about yourself or your skill sets if any.",
+        "postList":[
+                        {
+                            "heading":"Latest Posts"
+
+                        },
+                        {
+                            "postSubList":[
+                                            {
+                                                "list":"This is awesome post title"
+                                            },
+                                            {
+                                                "list":"Awesome features are awesome"
+                                            },
+                                            {
+                                                "list":"Create your own awesome website"
+                                            },
+                                            {
+                                                "list":"Wow, this is fourth post title"
+                                            }
+                                        
+                            ]
+                        }
+        ],
+        "stayTouchList":[
+                            {
+                                "heading":"Stay in touch"
+
+                            },
+                            {
+                                "email":"vashishtrohan29"
+                            },
+                            {
+                                "stayTouchSubList":[
+                                                        {
+                                                            "list":"+91 8168694436"
+                                                        },
+                                                        {
+                                                            "list":"+91 9034208478"
+                                                        }
+                                            
+                                ]
+                            }
+        ]
+    }
+}
+
+
