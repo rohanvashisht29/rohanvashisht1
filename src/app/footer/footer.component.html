@@ -14,27 +14,26 @@
           
           <div class="latestcol">
           <div class="col-sm-4">
-              <div class="latestpost" *ngFor="let postList of footer.postList">
-                <h3 style="color:black">{{postList.heading}}</h3>
-                <ul  *ngIf="postList.postSubList">
-                    <li *ngFor="let postSubList of postList.postSubList"><p>{{postSubList.list}}</p><hr></li>
-                </ul>
+              <div class="latestpost">
+                    <h3 style="color:black">{{footer.postHead.heading}}</h3>
+                    <ng-container *ngFor="let postList of footer.postList">
+                        <ul  *ngIf="postList.postSubList">
+                            <li *ngFor="let postSubList of postList.postSubList"><p>{{postSubList.list}}</p><hr></li>
+                        </ul>
+                    </ng-container>    
                
-            </div>
+                 </div>
           </div>
           </div>
 
             <div class="col-sm-4">
-                <div [ngClass]="{'staytouch' : footer.stayTouchList}">
+                <div [ngClass]="{'staytouch' : footer.stayTouchList}"> 
+                    <h3 style="color:black">{{footer.stayTouchHead.heading}}</h3>
                     <ng-container *ngFor="let contactList of footer.stayTouchList">
-                        <ng-container *ngIf="contactList!=footer.stayTouchList">
-                                <h3 style="color:black">{{contactList.heading}}</h3>
-                                <p *ngIf="contactList.email"><span>Email: </span><a href="mailto:vashishtrohan29@gmail.com" style="color: #109173;">{{contactList.email}}</a></p>
+                                <p><span>{{contactList.key}}</span><a href="{{contactList.href}}" target="_blank">{{contactList.value}}</a></p>
                                 <ul *ngIf="contactList.stayTouchSubList">
-                                    <li *ngFor="let contactSubList of contactList.stayTouchSubList"><p><span>Phone Number: </span>{{contactSubList.list}} </p></li>
+                                    <li *ngFor="let contactSubList of contactList.stayTouchSubList"><p><span>{{contactSubList.key}} </span><a href="{{contactSubList.href}}">{{contactSubList.value}} </a></p></li>
                                 </ul>
-                        </ng-container>
-                       
                     </ng-container>
                 </div>    
             </div>

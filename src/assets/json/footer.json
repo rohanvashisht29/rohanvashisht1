@@ -2,11 +2,10 @@
     "footer":{
         "logo":"Rohan Vashisht",
         "description":"User description goes here. Write about yourself or your skill sets if any.",
+        "postHead":{
+            "heading":"Latest Posts"
+        },
         "postList":[
-                        {
-                            "heading":"Latest Posts"
-
-                        },
                         {
                             "postSubList":[
                                             {
@@ -25,21 +24,28 @@
                             ]
                         }
         ],
+        "stayTouchHead":{
+            "heading":"Stay in touch"
+        },
+        
         "stayTouchList":[
+                            
                             {
-                                "heading":"Stay in touch"
-
-                            },
-                            {
-                                "email":"vashishtrohan29"
+                                "key":"Email: ",
+                                "value":"vashishtrohan29",
+                                "href" :"mailto:vashishtrohan29@gmail.com"
                             },
                             {
                                 "stayTouchSubList":[
                                                         {
-                                                            "list":"+91 8168694436"
+                                                            "key":"Phone number: ",
+                                                            "value":"+91 8168694436",
+                                                            "href" :"tel:+91 8168694436"
                                                         },
                                                         {
-                                                            "list":"+91 9034208478"
+                                                            "key":"Phone number: ",
+                                                            "value":"+91 9034208478",
+                                                            "href" :"tel:+91 9034208478"
                                                         }
                                             
                                 ]
