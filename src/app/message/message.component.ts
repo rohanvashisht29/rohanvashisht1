@@ -69,11 +69,11 @@ export class MessageComponent implements OnInit {
   createForm()
     {
       this.myform =new FormGroup({
-      firstName: new FormControl(),
-      Email: new FormControl(),
-      CompanyName: new FormControl(),
-      Subject: new FormControl(),
-      Message: new FormControl()
+        firstName: new FormControl(),
+        Email: new FormControl(),
+        CompanyName: new FormControl(),
+        Subject: new FormControl(),
+        Message: new FormControl()
       })
     }
 

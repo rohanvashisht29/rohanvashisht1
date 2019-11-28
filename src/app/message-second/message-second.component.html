@@ -1,42 +1,126 @@
-<br><br>
-<br><br>
 
+    <head>
+    <link rel="stylesheet" href="../../assets/css/bulma/bulma.css">
+    <link rel="stylesheet" href="../../assets/css/bulma/bulma.css.map">   
+    <link rel="stylesheet" href="../../assets/css/bulma/bulma.min.css"> 
+    <link rel="stylesheet" href="../../assets/css/bulma/customform.css">  
 
-<iframe
-    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13722.103134098523!2d76.7858126!3d30.703615999999997!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1523323671199" 
-    width="100%" height="300" frameborder="0" style="border:0" allowfullscreen>
-</iframe>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  
+  </head>
 
-<br><br><br>
+  <div class="wrapper">
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                    
+                    <div class="form-group">
+                        <div class="field is-horizontal">
+                        <label class="field-label">PIWIK *</label>
+                        <div class="field-body">
+                                <div class="upload-btn-wrapper">
+                                <label class="file-label">
+                                    <input class="input" type="file" name="myfile" formControlName="piwikSingleFile" required>
+                                </label>
+                                <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                            </div>
+                        </div>  
+                        
+                    </div>    
+                        
+                    <div class="form-group">
+                        <div class="field is-horizontal">
+                            <label class="field-label">FINAL *</label>
+                            <div class="field-body">
+                                <div class="upload-btn-wrapper">
+                                    <label class="file-label">
+                                        <input class="input" type="file" name="myfile" multiple="multiple" formControlName="finalMultipleFile" required>
+                                    </label>
+                                    <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                            </div>  
+                        </div>      
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="field is-horizontal">
+                            <label class="field-label">PIWIK KEY *</label>
+                            <div class="field-body">
+                                <div class="upload-btn-wrapper">
+                                    <input class="input" type="text" placeholder="INPUT" formControlName="piwikKey" required>
+                                    <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>    
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="form-group">        
+                        <div class="field is-horizontal">
+                            <label class="field-label">FINAL KEY *</label>
+                            <div class="field-body">
+                                <div class="upload-btn-wrapper">
+                                    <input class="input" type="text" placeholder="INPUT" formControlName="finalKey" required>
+                                    <p *ngIf = "error" class="text-danger">This field is required</p>  <!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>    
+                            </div>
+                        </div>  
+                    </div>    
+                    
+                    <div class="form-group">
+                        <div class="columns">
+                                <div class="column">
+                                    <input class="input" type="text" placeholder="KEY1" formControlName="key1" required>
+                                    <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                                <div class="column">
+                                        <input class="input" type="text" placeholder="COUNT1" formControlName="count1" required>
+                                        <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                                <div class="column">
+                                        <input class="input" type="text" placeholder="INTERSECTION1" formControlName="intersection1" required>
+                                        <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                        </div>        
+                        <div class="columns">
+                                <div class="column">
+                                        <input class="input" type="text" placeholder="KEY2" formControlName="key2" required>
+                                        <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                                <div class="column">
+                                        <input class="input" type="text" placeholder="COUNT2" formControlName="count2" required>
+                                        <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                                <div class="column">
+                                        <input class="input" type="text" placeholder="INTERSECTION2" formControlName="intersection2" required>
+                                        <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                        </div> 
+                        <div class="columns">
+                                <div class="column">
+                                        <input class="input" type="text" placeholder="KEY3" formControlName="key3" required>
+                                        <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                                <div class="column">
+                                        <input class="input" type="text" placeholder="COUNT3" formControlName="count3" required>
+                                        <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                                <div class="column">
+                                        <input class="input" type="text" placeholder="INTERSECTION3" formControlName="intersection3" required>
+                                        <div class="upload-btn-wrapper"><p *ngIf = "error" class="text-danger">This field is required</p></div><!-- added a condition when this.error is true then it will print error on page.-->
+                                </div>
+                        </div> 
+                    </div>    
+                    
+                    
+                        <div class="field is-grouped has-full-width">
+                            <div class="control">
+                                <button class="button is-link">Submit</button>
+                            </div>
+                            <pre>{{myForm.value | json}}</pre>
+                        </div>
 
-<div class="container">
-    <div class="row">
-    <form action="">
-        <div class="col-sm-6">
-            <label for="name" class="control-label">Name</label>
-            <input type="text" class="form-control" required>
-            <br>
-            <label for="email" class="control-label">Email</label>
-            <input type="email" class="form-control" required>
-            <br>
-            <label for="phone" class="control-label">Phone</label>
-            <input type="number" class="form-control" value="9067921">
-            <br>
-            <label for="Cname" class="control-label">Company name</label>
-            <input type="text" class="form-control" required>
-            <br>
-        </div>
-        <div class="col-sm-6">
-            <label for="subject" class="control-label">Subject</label>
-            <input type="text" class="form-control" required>
-            <br>
-            <label for="Message" class="control-label">Message</label>
-            <textarea name="Message" id="one" rows="6" class="form-control" required></textarea>
-            <br>
-            <input type="submit" class="btn btn-info btn-block" value="Submit">
-        </div>
-    </form>
-    </div>
-</div>
-
-
+        </form>                        
+  </div>  
+  
+  
+  

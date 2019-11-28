@@ -1,0 +1,32 @@
+.wrapper{
+	width: 80%;margin: 70px auto;padding: 50px;box-shadow: 0px 5px 33px -18px  rgb(0,0,0,0.4);
+}
+.upload-btn-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.upload-btn-wrapper .btn {
+    color: white;
+    background-color: #115393;
+    padding: 8px 32px;
+    font-size: 16px;
+    border-radius: 0;
+    float: right;
+}
+.wrapper{
+    display: table;
+    height: 100%;
+}
+.field.has-full-width {
+    width: 100%;
+}
+
+/* @media (min-width: 992px){
+    .field {
+        width: 48%;
+        float: left;
+        margin: 0 1%;
+    }
+} */
